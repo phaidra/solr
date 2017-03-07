@@ -1482,4 +1482,30 @@
       EditorialMarkerFactory will do exactly that:
      <transformer name="qecBooster" class="org.apache.solr.response.transform.EditorialMarkerFactory" />
     -->
+
+<searchComponent name="suggest" class="solr.SuggestComponent">
+  <lst name="suggester">
+    <str name="name">titlesuggester</str>
+    <str name="field">title_suggest</str>
+    <str name="suggestAnalyzerFieldType">string</str>
+    <str name="buildOnStartup">true</str>
+  </lst>
+  <lst name="suggester">
+    <str name="name">ownersuggester</str>
+    <str name="field">owner</str>
+    <str name="suggestAnalyzerFieldType">string</str>
+    <str name="buildOnStartup">true</str>
+  </lst>
+</searchComponent>
+
+<requestHandler name="/suggest" class="solr.SearchHandler" startup="lazy">
+  <lst name="defaults">
+    <str name="suggest">true</str>
+    <str name="suggest.count">10</str>
+  </lst>
+  <arr name="components">
+    <str>suggest</str>
+  </arr>
+</requestHandler>
+
 </config>

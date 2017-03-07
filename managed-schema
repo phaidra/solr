@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Solr managed schema - automatically generated - DO NOT EDIT -->
 <schema name="phaidra-schema" version="1.6">
-  <uniqueKey>_id</uniqueKey>
+  <uniqueKey>pid</uniqueKey>
   <fieldType name="_bbox_coord" class="solr.TrieDoubleField" stored="false" docValues="true" precisionStep="8"/>
   <fieldType name="bbox" class="solr.BBoxField" geo="true" numberType="_bbox_coord" storeSubFields="false"/>
   <fieldType name="binary" class="solr.BinaryField"/>
@@ -78,6 +78,13 @@
       <filter class="solr.ItalianLightStemFilterFactory"/>
     </analyzer>
   </fieldType>
+  <fieldType name="text_suggest" class="solr.TextField" positionIncrementGap="100">
+    <analyzer>
+      <tokenizer class="solr.StandardTokenizerFactory"/>
+      <filter class="solr.StandardFilterFactory"/>
+      <filter class="solr.LowerCaseFilterFactory"/>
+    </analyzer>
+  </fieldType>
   <fieldType name="text_ws" class="solr.TextField" positionIncrementGap="100">
     <analyzer>
       <tokenizer class="solr.WhitespaceTokenizerFactory"/>
@@ -89,14 +96,15 @@
   <fieldType name="tints" class="solr.TrieIntField" positionIncrementGap="0" docValues="true" multiValued="true" precisionStep="8"/>
   <fieldType name="tlong" class="solr.TrieLongField" positionIncrementGap="0" docValues="true" precisionStep="8"/>
   <fieldType name="tlongs" class="solr.TrieLongField" positionIncrementGap="0" docValues="true" multiValued="true" precisionStep="8"/>
-  <field name="_id" type="string" multiValued="false" indexed="true" required="true" stored="true"/>
+  <field name="_id" type="string" multiValued="false" indexed="true" stored="true"/>
+  <field name="_id._oid" type="strings"/>
   <field name="_root_" type="string" docValues="false" indexed="true" stored="false"/>
   <field name="_text_" type="text_general" multiValued="true" indexed="true" stored="false"/>
   <field name="_ts" type="double" indexed="true" stored="true"/>
   <field name="_updated" type="tdoubles"/>
   <field name="_version_" type="double" indexed="true" stored="false"/>
-  <field name="alt_formats" type="strings" multiValued="true" indexed="true" stored="false"/>
-  <field name="alt_versions" type="strings" multiValued="true" indexed="true" stored="false"/>
+  <field name="altformats" type="strings" multiValued="true" indexed="true" stored="true"/>
+  <field name="altversions" type="strings" multiValued="true" indexed="true" stored="true"/>
   <field name="bbox" type="bbox" indexed="true" stored="true"/>
   <field name="bbox__maxX" type="_bbox_coord"/>
   <field name="bbox__maxY" type="_bbox_coord"/>
@@ -107,22 +115,24 @@
   <field name="created" type="date" indexed="true" stored="true"/>
   <field name="datastreams" type="strings" multiValued="true" indexed="true" stored="true"/>
   <field name="dc_license" type="strings" multiValued="true" indexed="true" stored="true"/>
-  <field name="haspart" type="strings" multiValued="true" indexed="true" stored="true"/>
-  <field name="ispartof" type="strings" multiValued="true" indexed="true" stored="true"/>
-  <field name="isbacksideof" type="strings" multiValued="true" indexed="true" stored="true"/>
+  <field name="haspart" type="strings" multiValued="true" indexed="true" stored="false"/>
+  <field name="isbacksideof" type="strings"/>
+  <field name="ispartof" type="strings" multiValued="true" indexed="true" stored="false"/>
   <field name="latlon" type="location_rpt" indexed="true" stored="true"/>
-  <!--<field name="latlon" type="location" indexed="true" stored="true"/>-->
   <field name="modified" type="date" indexed="true" stored="true"/>
   <field name="ns" type="string" indexed="true" stored="true"/>
   <field name="owner" type="string" indexed="true" stored="true"/>
-  <field name="pid" type="string" indexed="true" stored="true"/>
+  <field name="pid" type="string" indexed="true" required="true" stored="true"/>
+  <field name="predecessor" type="strings"/>
   <field name="resourcetype" type="string" indexed="true" stored="true"/>
   <field name="size" type="double" indexed="true" stored="true"/>
+  <field name="successor" type="strings"/>
   <field name="tcreated" type="tdates" multiValued="true" indexed="true" stored="false"/>
+  <field name="title_suggest" type="text_suggest" indexed="true" stored="true"/>
   <field name="tmodified" type="tdates" multiValued="true" indexed="true" stored="false"/>
   <field name="tsize" type="tdoubles" multiValued="true" indexed="true" stored="false"/>
   <field name="uwm_roles_json" type="text_general" indexed="false" stored="true"/>
-  <!--<dynamicField name="*_coordinate"  type="tdouble" indexed="true"  stored="false"/>-->
+  <dynamicField name="sort_*" type="string" multiValued="false" indexed="true" stored="false"/>
   <dynamicField name="bib_*" type="text_general" multiValued="true" indexed="true" stored="true"/>
   <dynamicField name="*_eng" type="text_en" multiValued="true" indexed="true" stored="true"/>
   <dynamicField name="*_deu" type="text_de" multiValued="true" indexed="true" stored="true"/>
@@ -132,5 +142,6 @@
   <copyField source="dc_rights" dest="dc_license"/>
   <copyField source="modified" dest="tmodified"/>
   <copyField source="size" dest="tsize"/>
+  <copyField source="sort_dc_title" dest="title_suggest"/>
   <copyField source="*" dest="_text_"/>
 </schema>
