@@ -126,13 +126,16 @@
   <field name="predecessor" type="strings"/>
   <field name="resourcetype" type="string" indexed="true" stored="true"/>
   <field name="size" type="double" indexed="true" stored="true"/>
+  <field name="sort_dc_title" type="string" indexed="true" stored="false"/>
+  <field name="sort_deu_dc_title" type="string" indexed="true" stored="false"/>
+  <field name="sort_eng_dc_title" type="string" indexed="true" stored="false"/>
   <field name="successor" type="strings"/>
   <field name="tcreated" type="tdates" multiValued="true" indexed="true" stored="false"/>
   <field name="title_suggest" type="text_suggest" indexed="true" stored="true"/>
   <field name="tmodified" type="tdates" multiValued="true" indexed="true" stored="false"/>
   <field name="tsize" type="tdoubles" multiValued="true" indexed="true" stored="false"/>
   <field name="uwm_roles_json" type="text_general" indexed="false" stored="true"/>
-  <dynamicField name="sort_*" type="string" multiValued="false" indexed="true" stored="false"/>
+  <dynamicField name="*_desc_raw" type="strings" multiValued="true" indexed="false" stored="true"/>
   <dynamicField name="bib_*" type="text_general" multiValued="true" indexed="true" stored="true"/>
   <dynamicField name="*_eng" type="text_en" multiValued="true" indexed="true" stored="true"/>
   <dynamicField name="*_deu" type="text_de" multiValued="true" indexed="true" stored="true"/>
