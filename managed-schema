@@ -2,8 +2,6 @@
 <!-- Solr managed schema - automatically generated - DO NOT EDIT -->
 <schema name="phaidra-schema" version="1.6">
   <uniqueKey>pid</uniqueKey>
-  <fieldType name="_bbox_coord" class="solr.TrieDoubleField" stored="false" docValues="true" precisionStep="8"/>
-  <fieldType name="bbox" class="solr.BBoxField" geo="true" numberType="_bbox_coord" storeSubFields="false"/>
   <fieldType name="binary" class="solr.BinaryField"/>
   <fieldType name="boolean" class="solr.BoolField" sortMissingLast="true"/>
   <fieldType name="booleans" class="solr.BoolField" sortMissingLast="true" multiValued="true"/>
@@ -105,12 +103,6 @@
   <field name="_version_" type="double" indexed="true" stored="false"/>
   <field name="altformats" type="strings" multiValued="true" indexed="true" stored="true"/>
   <field name="altversions" type="strings" multiValued="true" indexed="true" stored="true"/>
-  <field name="bbox" type="bbox" indexed="true" stored="true"/>
-  <field name="bbox__maxX" type="_bbox_coord"/>
-  <field name="bbox__maxY" type="_bbox_coord"/>
-  <field name="bbox__minX" type="_bbox_coord"/>
-  <field name="bbox__minY" type="_bbox_coord"/>
-  <field name="bbox__xdl" type="boolean"/>
   <field name="cmodel" type="string" indexed="true" stored="true"/>
   <field name="created" type="date" indexed="true" stored="true"/>
   <field name="datastreams" type="strings" multiValued="true" indexed="true" stored="true"/>
