@@ -49,6 +49,10 @@ Add security-constraint with auth-constraint for everything and a security-const
       <web-resource-name>mysolrcore-suggest</web-resource-name>
       <url-pattern>/mysolrcore/suggest/*</url-pattern>
     </web-resource-collection>
+    <web-resource-collection>
+      <web-resource-name>mysolrcore-export</web-resource-name>
+      <url-pattern>/mysolrcore/export/*</url-pattern>
+    </web-resource-collection>
   </security-constraint>
 
   <security-constraint>
