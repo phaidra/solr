@@ -1,20 +1,15 @@
 # Adding new core
 
-Create core
+1) Create core
 ```bash
-$ ./solr create -c mynewcore
-
-Setup new core instance directory:  
-/var/solr/data/mynewcore  
-
-Creating new core 'mynewcore' using command:  
-http://localhost:8983/solr/admin/cores?action=CREATE&name=mynewcore&instanceDir=mynewcore
+mkdir /var/solr/data/newcore
+cp -R /var/solr/data/someoldcore/conf /var/solr/data/newcore/
+mkdir /var/solr/data/newcore/data
+sudo chown solr:solr -R /var/solr/data/newcore/
 
 ```
 
-In the created core, replace /var/solr/data/bagger/conf/managed-schema with our [managed schema](https://github.com/phaidra/phaidra-bagger/blob/master/etc/solr/managed-schema)
-
-Restart solr
+2) Add newcore in Solr's core manager
 
 # Securing Solr (jetty)
 
