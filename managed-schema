@@ -121,9 +121,10 @@
   <field name="sort_dc_title" type="string" indexed="true" stored="false"/>
   <field name="sort_deu_dc_title" type="string" indexed="true" stored="false"/>
   <field name="sort_eng_dc_title" type="string" indexed="true" stored="false"/>
+  <field name="sort_ita_dc_title" type="string" indexed="true" stored="false"/>
   <field name="successor" type="strings"/>
   <field name="tcreated" type="tdates" multiValued="true" indexed="true" stored="false"/>
-  <field name="title_suggest" type="text_suggest" indexed="true" stored="true"/>
+  <field name="title_suggest" type="text_suggest" multiValued="true" indexed="true" stored="true"/>
   <field name="tmodified" type="tdates" multiValued="true" indexed="true" stored="false"/>
   <field name="tsize" type="tdoubles" multiValued="true" indexed="true" stored="false"/>
   <field name="uwm_roles_json" type="text_general" indexed="false" stored="true"/>
@@ -138,6 +139,6 @@
   <copyField source="dc_rights" dest="dc_license"/>
   <copyField source="modified" dest="tmodified"/>
   <copyField source="size" dest="tsize"/>
-  <copyField source="sort_dc_title" dest="title_suggest"/>
+  <copyField source="*_dc_title" dest="title_suggest"/>
   <copyField source="*" dest="_text_"/>
 </schema>
