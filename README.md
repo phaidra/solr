@@ -89,7 +89,7 @@ Add security-constraint with auth-constraint for everything and a security-const
 # Changing certificate
 
 ```bash
-openssl pkcs12 -export -in /etc/ssl/certs/myhostname.crt -inkey /etc/ssl/private/myhostname.key -name solr -out myhostname.p12
+openssl pkcs12 -export -in /etc/ssl/certs/myhostname.crt -inkey /etc/ssl/private/myhostname.key -name solr -certfile chain.crt -out myhostname.p12
 
 sudo keytool -importkeystore -deststorepass secret -destkeystore /opt/solr-6.1.0/server/etc/solr-ssl.keystore.jks -srckeystore /etc/ssl/private/myhostname.p12 -srcstoretype PKCS12
 
