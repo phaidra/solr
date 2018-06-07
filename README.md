@@ -15,6 +15,8 @@ sudo chown solr:solr -R /var/solr/data/newcore/
 
 ### HashLoginService
 
+#### 6.1
+
 Add 
 ```xml
     <Call name="addBean">
@@ -28,6 +30,21 @@ Add
    </Call>
 ```
 to jetty.xml (/opt/solr-6.1.0/server/etc/jetty.xml)
+
+#### 7.3
+
+Add 
+```xml
+    <Call name="addBean">
+      <Arg>
+        <New class="org.eclipse.jetty.security.HashLoginService">
+          <Set name="name">Solr Admin Access</Set>
+          <Set name="config"><SystemProperty name="jetty.home" default="."/>/etc/realm.properties</Set>
+        </New>
+      </Arg>
+   </Call>
+```
+to jetty.xml (/opt/solr-7.3.1/server/etc/jetty.xml)
 
 ### jetty users
 
