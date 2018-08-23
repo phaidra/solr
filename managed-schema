@@ -127,11 +127,12 @@
   <field name="sort_ita_dc_title" type="string" indexed="true" stored="false"/>
   <field name="successor" type="strings"/>
   <field name="tcreated" type="tdates" multiValued="true" indexed="true" stored="false"/>
-  <field name="title_suggest" type="text_suggest" multiValued="true" indexed="true" stored="true"/>
+  <field name="title_suggest" type="text_suggest" multiValued="true" indexed="true" stored="false"/>
   <field name="tmodified" type="tdates" multiValued="true" indexed="true" stored="false"/>
   <field name="tsize" type="tdoubles" multiValued="true" indexed="true" stored="false"/>
   <field name="uwm_roles_json" type="text_general" indexed="false" stored="true"/>
   <field name="roles_json" type="text_general" indexed="false" stored="true"/>
+  <field name="descriptions_json" type="text_general" indexed="false" stored="true"/>
   <field name="annotations_json" type="text_general" indexed="false" stored="true"/>
   <dynamicField name="*_desc_raw" type="strings" multiValued="true" indexed="false" stored="true"/>
   <dynamicField name="bib_*" type="text_general" multiValued="true" indexed="true" stored="true"/>
