@@ -114,6 +114,7 @@
   <field name="isbacksideof" type="strings"/>
   <field name="ispartof" type="strings" multiValued="true" indexed="true" stored="false"/>
   <field name="ismemberof" type="strings" multiValued="true" indexed="true" stored="false"/>
+  <field name="keyword_suggest" type="text_suggest" multiValued="true" indexed="true" stored="true"/>
   <field name="latlon" type="location_rpt" indexed="true" stored="true"/>
   <field name="modified" type="date" indexed="true" stored="true"/>
   <field name="ns" type="string" indexed="true" stored="true"/>
@@ -135,6 +136,7 @@
   <field name="roles_json" type="text_general" indexed="false" stored="true"/>
   <field name="descriptions_json" type="text_general" indexed="false" stored="true"/>
   <field name="annotations_json" type="text_general" indexed="false" stored="true"/>
+  <field name="vra_inscription" type="text_general" multiValued="true" indexed="true" stored="true"/>
   <dynamicField name="*_desc_raw" type="strings" multiValued="true" indexed="false" stored="true"/>
   <dynamicField name="bib_*" type="text_general" multiValued="true" indexed="true" stored="true"/>
   <dynamicField name="*_eng" type="text_en" multiValued="true" indexed="true" stored="true"/>
@@ -145,6 +147,7 @@
   <copyField source="dc_rights" dest="dc_license"/>
   <copyField source="modified" dest="tmodified"/>
   <copyField source="size" dest="tsize"/>
+  <copyField source="dc_subject*" dest="keyword_suggest"/>
   <copyField source="*_dc_title" dest="title_suggest"/>
   <copyField source="*" dest="_text_"/>
 </schema>
