@@ -137,7 +137,7 @@
   <field name="tcreated" type="tdates" multiValued="true" indexed="true" stored="false"/>
   <field name="title_suggest" type="text_suggest" multiValued="true" indexed="true" stored="false"/>
   <field name="tmodified" type="tdates" multiValued="true" indexed="true" stored="false"/>
-  <field name="dcterms_created_year" type="tlongs" multiValued="true" indexed="true" stored="true"/>
+  <field name="dcterms_created_year" type="int" indexed="true" stored="false"/>
   <field name="tsize" type="tdoubles" multiValued="true" indexed="true" stored="false"/>
   <field name="uwm_roles_json" type="text_general" indexed="false" stored="true"/>
   <field name="roles_json" type="text_general" indexed="false" stored="true"/>
