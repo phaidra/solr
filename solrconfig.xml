@@ -1488,7 +1488,7 @@
     <str name="name">titlesuggester</str>
     <str name="field">title_suggest</str>
     <str name="payloadField">dc_title</str>
-    <str name="lookupImpl">AnalyzingInfixLookupFactory</str>
+    <str name="lookupImpl">BlendedInfixLookupFactory</str>
     <str name="dictionaryImpl">DocumentDictionaryFactory</str>
     <str name="suggestAnalyzerFieldType">text_general</str>
     <str name="indexPath">suggest_fuzzy_doc_dc_title</str>
@@ -1499,7 +1499,7 @@
     <str name="name">ownersuggester</str>
     <str name="field">owner</str>
     <str name="payloadField">owner</str>
-    <str name="lookupImpl">AnalyzingInfixLookupFactory</str>
+    <str name="lookupImpl">BlendedInfixLookupFactory</str>
     <str name="dictionaryImpl">DocumentDictionaryFactory</str>
     <str name="suggestAnalyzerFieldType">text_general</str>
     <str name="indexPath">suggest_fuzzy_doc_owner</str>
@@ -1510,7 +1510,7 @@
     <str name="name">keywordsuggester</str>
     <str name="field">keyword_suggest</str>
     <str name="payloadField">keyword_suggest</str>
-    <str name="lookupImpl">AnalyzingInfixLookupFactory</str>
+    <str name="lookupImpl">BlendedInfixLookupFactory</str>
     <str name="dictionaryImpl">DocumentDictionaryFactory</str>
     <str name="suggestAnalyzerFieldType">text_general</str>
     <str name="indexPath">suggest_fuzzy_doc_dc_subject</str>
@@ -1521,7 +1521,7 @@
     <str name="name">inscriptionsuggester</str>
     <str name="field">vra_inscription</str>
     <str name="payloadField">vra_inscription</str>
-    <str name="lookupImpl">AnalyzingInfixLookupFactory</str>
+    <str name="lookupImpl">BlendedInfixLookupFactory</str>
     <str name="dictionaryImpl">DocumentDictionaryFactory</str>
     <str name="suggestAnalyzerFieldType">text_general</str>
     <str name="indexPath">suggest_fuzzy_doc_vra_inscription</str>
