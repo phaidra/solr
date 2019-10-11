@@ -128,6 +128,7 @@
   <field name="ns" type="string" indexed="true" stored="true"/>
   <field name="owner" type="string" indexed="true" stored="true"/>
   <field name="pid" type="string" indexed="true" required="true" stored="true"/>
+  <field name="shelfmark" type="strings" indexed="true" stored="true"/>
   <field name="predecessor" type="strings"/>
   <field name="resourcetype" type="string" indexed="true" stored="true"/>
   <field name="size" type="double" indexed="true" stored="true"/>
