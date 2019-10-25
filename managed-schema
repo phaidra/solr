@@ -121,6 +121,7 @@
   <field name="references" type="strings" multiValued="true" indexed="true" stored="false"/>
   <field name="ispartof" type="strings" multiValued="true" indexed="true" stored="false"/>
   <field name="ismemberof" type="strings" multiValued="true" indexed="true" stored="false"/>
+  <field name="association" type="strings" multiValued="true" indexed="true" stored="true"/>
   <field name="isthumbnailfor" type="strings" multiValued="true" indexed="true" stored="false"/>
   <field name="keyword_suggest" type="text_suggest" multiValued="true" indexed="true" stored="true"/>
   <field name="latlon" type="location_rpt" indexed="true" stored="true"/>
