@@ -154,7 +154,7 @@
   <field name="tmodified" type="tdates" multiValued="true" indexed="true" stored="false"/>
   <field name="dcterms_created_year" type="tlongs"/>
   <field name="dcterms_created_year_sort" type="tlongs" multiValued="false" indexed="true"/>
-  <field name="dcterms_accessrights" type="strings" multiValued="true" indexed="true" stored="true"/>
+  <field name="dcterms_accessrights_id" type="strings" multiValued="true" indexed="true" stored="true"/>
   <field name="rdau_P60071_year" type="tlongs"/>
   <field name="rdau_P60071_year_sort" type="tlongs" multiValued="false" indexed="true"/>
   <field name="tsize" type="tdoubles" multiValued="true" indexed="true" stored="false"/>
