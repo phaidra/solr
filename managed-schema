@@ -123,7 +123,8 @@
   <field name="educational_enduserrole" type="strings" multiValued="true" indexed="true" stored="true"/>
   <field name="educational_learningresourcetype" type="strings" multiValued="true" indexed="true" stored="true"/>
   <field name="haspart" type="strings" multiValued="true" indexed="true" stored="false"/>
-  <field name="isbacksideof" type="strings" multiValued="true" indexed="true" stored="false"/>
+  <field name="isbacksideof" type="strings" multiValued="true" indexed="true" stored="true"/>
+  <field name="hassuccessor" type="strings" multiValued="true" indexed="true" stored="true"/>
   <field name="isalternativeformatof" type="strings" multiValued="true" indexed="true" stored="true"/>
   <field name="isalternativeversionof" type="strings" multiValued="true" indexed="true" stored="true"/>
   <field name="references" type="strings" multiValued="true" indexed="true" stored="false"/>
