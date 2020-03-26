@@ -151,7 +151,7 @@
   <field name="bf_physicallocation" type="strings"/>
   <field name="bf_shelfmark" type="strings" indexed="true" stored="true"/>
   <field name="bf_title_maintitle" type="strings" indexed="true" stored="true"/>
-  <field name="bf_title_subtitle" type="strings" indexed="true" stored="true"/
+  <field name="bf_title_subtitle" type="strings" indexed="true" stored="true"/>
   <field name="bf_paralleltitle_maintitle" type="strings" indexed="true" stored="true"/>
   <field name="bf_paralleltitle_subtitle" type="strings" indexed="true" stored="true"/>
   <field name="schema_genre" type="strings"/>
