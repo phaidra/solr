@@ -148,6 +148,7 @@
   <field name="sort_eng_dc_title" type="string" indexed="true" stored="false"/>
   <field name="sort_ita_dc_title" type="string" indexed="true" stored="false"/>
   <field name="successor" type="strings"/>
+  <field name="owl_sameas" type="strings" indexed="true" stored="true"/>
   <field name="bf_physicallocation" type="strings"/>
   <field name="bf_shelfmark" type="strings" indexed="true" stored="true"/>
   <field name="bf_title_maintitle" type="strings" indexed="true" stored="true"/>
