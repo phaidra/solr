@@ -132,6 +132,7 @@
   <field name="ismemberof" type="strings" multiValued="true" indexed="true" stored="false"/>
   <field name="association" type="strings" multiValued="true" indexed="true" stored="true"/>
   <field name="association_id" type="strings" multiValued="true" indexed="true" stored="true"/>
+  <field name="uwm_funding" type="strings" multiValued="true" indexed="true" stored="true"/>
   <field name="journal_title" type="strings" multiValued="true" indexed="true" stored="true"/>
   <field name="isthumbnailfor" type="strings" multiValued="true" indexed="true" stored="false"/>
   <field name="keyword_suggest" type="text_suggest" multiValued="true" indexed="true" stored="true"/>
