@@ -186,7 +186,6 @@
   <dynamicField name="dc_*" type="text_general" multiValued="true" indexed="true" stored="true"/>
   <dynamicField name="pos_in_*" type="tlongs" multiValued="false" indexed="true" stored="true"/>
   <copyField source="created" dest="tcreated"/>
-  <copyField source="dc_rights" dest="dc_license"/>
   <copyField source="modified" dest="tmodified"/>
   <copyField source="size" dest="tsize"/>
   <copyField source="dc_subject*" dest="keyword_suggest"/>
