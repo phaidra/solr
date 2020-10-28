@@ -164,6 +164,7 @@
   <field name="systemtag" type="strings" indexed="true" stored="true"/>
   <field name="tcreated" type="tdates" multiValued="true" indexed="true" stored="false"/>
   <field name="title_suggest" type="text_suggest" multiValued="true" indexed="true" stored="true"/>
+  <field name="title_suggest_ir" type="text_suggest" multiValued="true" indexed="true" stored="true"/>
   <field name="tmodified" type="tdates" multiValued="true" indexed="true" stored="false"/>
   <field name="dcterms_created_year" type="tlongs"/>
   <field name="dcterms_created_year_sort" type="tlongs" multiValued="false" indexed="true"/>
