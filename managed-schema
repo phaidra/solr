@@ -115,6 +115,7 @@
   <field name="dc_license" type="strings" multiValued="true" indexed="true" stored="true"/>
   <field name="edm_hastype" type="strings" multiValued="true" indexed="true" stored="true"/>
   <field name="edm_hastype_id" type="strings" multiValued="true" indexed="true" stored="true"/>
+  <field name="object_type_id" type="strings" multiValued="true" indexed="true" stored="true"/>
   <field name="funder" type="strings" multiValued="true" indexed="true" stored="true"/>
   <field name="funder_id" type="strings" multiValued="true" indexed="true" stored="true"/>
   <field name="project" type="strings" multiValued="true" indexed="true" stored="true"/>
