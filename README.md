@@ -101,6 +101,18 @@ Add security-constraint with auth-constraint for everything and a security-const
   </login-config>
 ```
 
+### log4shell
+
+edit `EXTRA_JVM_ARGUMENTS` in
+`sudo vi /opt/solr-8.1.1/contrib/prometheus-exporter/bin/solr-exporter`
+add
+`-Dlog4j2.formatMsgNoLookups=true`
+
+edit `/etc/default/solr.in.sh`
+add
+`SOLR_OPTS="$SOLR_OPTS -Dlog4j2.formatMsgNoLookups=true"`
+
+
 ### restart solr service
 
 # Changing certificate
