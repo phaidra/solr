@@ -83,7 +83,7 @@
   <fieldType name="text_suggest" class="solr.TextField" positionIncrementGap="100">
     <analyzer>
       <tokenizer class="solr.StandardTokenizerFactory"/>
-      <filter class="solr.StandardFilterFactory"/>
+      <!-- not available in 8.1+ <filter class="solr.StandardFilterFactory"/>-->
       <filter class="solr.LowerCaseFilterFactory"/>
     </analyzer>
   </fieldType>
