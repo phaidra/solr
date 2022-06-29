@@ -137,6 +137,7 @@
   <field name="haspart" type="strings" multiValued="true" indexed="true" stored="false"/>
   <field name="isbacksideof" type="strings" multiValued="true" indexed="true" stored="true"/>
   <field name="hassuccessor" type="strings" multiValued="true" indexed="true" stored="true"/>
+  <field name="hastrack" type="strings" multiValued="true" indexed="true" stored="true"/>
   <field name="isalternativeformatof" type="strings" multiValued="true" indexed="true" stored="true"/>
   <field name="isalternativeversionof" type="strings" multiValued="true" indexed="true" stored="true"/>
   <field name="references" type="strings" multiValued="true" indexed="true" stored="true"/>
@@ -162,7 +163,6 @@
   <field name="sort_eng_dc_title" type="string" indexed="true" stored="false"/>
   <field name="sort_ita_dc_title" type="string" indexed="true" stored="false"/>
   <field name="successor" type="strings"/>
-  <field name="hastrack" type="strings"/>
   <field name="owl_sameas" type="strings" indexed="true" stored="true"/>
   <field name="bf_physicallocation" type="strings"/>
   <field name="bf_shelfmark" type="strings" indexed="true" stored="true"/>
