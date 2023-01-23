@@ -76,6 +76,10 @@ Add security-constraint with auth-constraint for everything and a security-const
       <url-pattern>/mysolrcore/select/*</url-pattern>
     </web-resource-collection>
     <web-resource-collection>
+      <web-resource-name>mysolrcore-pages-select</web-resource-name>
+      <url-pattern>/mysolrcore_pages/select/*</url-pattern>
+    </web-resource-collection>
+    <web-resource-collection>
       <web-resource-name>mysolrcore-suggest</web-resource-name>
       <url-pattern>/mysolrcore/suggest/*</url-pattern>
     </web-resource-collection>
