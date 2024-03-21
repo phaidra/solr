@@ -131,6 +131,7 @@
   <field name="programme" type="strings" multiValued="true" indexed="true" stored="true"/>
   <field name="programme_id" type="strings" multiValued="true" indexed="true" stored="true"/>
   <field name="oer" type="boolean" multiValued="false" indexed="true" stored="true"/>
+  <field name="isrestricted" type="boolean" multiValued="false" indexed="true" stored="true"/>
   <field name="educational_context" type="strings" multiValued="true" indexed="true" stored="true"/>
   <field name="educational_enduserrole" type="strings" multiValued="true" indexed="true" stored="true"/>
   <field name="educational_learningresourcetype" type="strings" multiValued="true" indexed="true" stored="true"/>
